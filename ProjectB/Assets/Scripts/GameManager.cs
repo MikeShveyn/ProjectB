@@ -12,26 +12,34 @@ public class GameManager : Singleton<GameManager>
     
     private Realm _realm;
     private Doc _doc;
-    
-    protected override void Awake()
+    private Patient _patient;
+    private const string pathToDb = "C:/Users/97253/Desktop/ProjectB/Data";
+
+    public Doc GetDoc()
     {
-        base.Awake();
+        return _doc;
     }
-
-
+    
     private void OnEnable()
     {
-        _realm = Realm.GetInstance();
+        var config = new RealmConfiguration(pathToDb + "/default.realm");
+        
+        _realm  = Realm.GetInstance(config);
+        
     }
-
+    
     private void Start()
     {
         DontDestroyOnLoad(this.gameObject);
+        //WINDOWS
         SignUp.SetActive(false);
+        
+        
+        //start Level load
         UIManager.Instance.LoadLevel("Login");
     }
 
-
+    //Doc_____________________________________________________________________________
     public void CheckDoc(string tag)
     {
         _doc = _realm.Find<Doc>(tag);
@@ -54,8 +62,12 @@ public class GameManager : Singleton<GameManager>
         print("Succeed!");
         UIManager.Instance.LoadLevel("Login");
     }
-
-    //SignUpWindow
+    
+    //patient-----------------------------------------------------------------------------
+    
+    
+    
+    //WINDOWS-----------------------------------------------------------------------------
     public void SignUpPage()
     {
         UIManager.Instance.LoadLevel("SignUp");

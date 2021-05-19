@@ -78,7 +78,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Display last appointment
+  m_Text: 
 --- !u!1 &1708242734624724884
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,7 +157,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Save patient's data
+  m_Text: 
 --- !u!1 &1708973232446970895
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,12 +190,12 @@ RectTransform:
   m_Children:
   - {fileID: 1901609704161304917}
   m_Father: {fileID: 6394179718105662412}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 543, y: -63.355}
-  m_SizeDelta: {x: 520.8188, y: 83.604}
+  m_AnchoredPosition: {x: 550, y: -60.205}
+  m_SizeDelta: {x: 96.4729, y: 83.604}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5985973751045376608
 CanvasRenderer:
@@ -392,6 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c95caaee21160354db74aee697aaf591, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  titleName: {fileID: 6394179716941642055}
 --- !u!1 &6394179716941642053
 GameObject:
   m_ObjectHideFlags: 0
@@ -502,9 +503,9 @@ RectTransform:
   m_Children:
   - {fileID: 6394179716941642052}
   - {fileID: 4400723151206889576}
+  - {fileID: 2682716552818876000}
   - {fileID: 7034409445832105257}
   - {fileID: 1870593687437916381}
-  - {fileID: 2682716552818876000}
   m_Father: {fileID: 6394179716486613190}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -583,12 +584,12 @@ RectTransform:
   m_Children:
   - {fileID: 1299897818966127007}
   m_Father: {fileID: 6394179718105662412}
-  m_RootOrder: 4
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -22, y: -63.355}
-  m_SizeDelta: {x: 520.8188, y: 83.604}
+  m_AnchoredPosition: {x: 356, y: -60.205}
+  m_SizeDelta: {x: 98.5563, y: 83.604}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &468607493484664925
 CanvasRenderer:
@@ -703,7 +704,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6394179718105662412}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -944,8 +945,9 @@ GameObject:
   - component: {fileID: 4400723151206889576}
   - component: {fileID: 282441988431541358}
   - component: {fileID: 6896543013067507634}
+  - component: {fileID: 1738804294063720837}
   m_Layer: 5
-  m_Name: Menu1
+  m_Name: MenuCheckP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1009,3 +1011,15 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1738804294063720837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8833236382370510950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 796672892d1f4ecaa8776a2619f034d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

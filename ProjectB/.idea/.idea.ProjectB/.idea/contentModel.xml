@@ -8,13 +8,17 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Data" t="Include">
+            <e p="Check.cs" t="Include" />
+            <e p="DBank.cs" t="Include" />
             <e p="Doc.cs" t="Include" />
+            <e p="Patient.cs" t="Include" />
           </e>
           <e p="GameManager.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="Analize.cs" t="Include" />
             <e p="End.cs" t="Include" />
             <e p="Login.cs" t="Include" />
+            <e p="MenuCheckP.cs" t="Include" />
             <e p="SignUp.cs" t="Include" />
           </e>
           <e p="UIManager.cs" t="Include" />
