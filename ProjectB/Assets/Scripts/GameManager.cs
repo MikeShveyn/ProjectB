@@ -8,8 +8,7 @@ using UTILS;
 
 public class GameManager : Singleton<GameManager>
 {
-    [SerializeField] private GameObject SignUp; 
-    
+    [SerializeField] private GameObject SignUp;
     private Realm _realm;
     private Doc _doc;
     private Patient _patient;
@@ -18,6 +17,11 @@ public class GameManager : Singleton<GameManager>
     public Doc GetDoc()
     {
         return _doc;
+    }
+
+    public Patient GetPatient()
+    {
+        return _patient;
     }
     
     private void OnEnable()
@@ -33,8 +37,7 @@ public class GameManager : Singleton<GameManager>
         DontDestroyOnLoad(this.gameObject);
         //WINDOWS
         SignUp.SetActive(false);
-        
-        
+
         //start Level load
         UIManager.Instance.LoadLevel("Login");
     }
@@ -64,7 +67,27 @@ public class GameManager : Singleton<GameManager>
     }
     
     //patient-----------------------------------------------------------------------------
-    
+    public bool CheckPatient(string tag)
+    {
+        _patient = _realm.Find<Patient>(tag);
+        if (_patient == null)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+
+    public void PatientWriteToData(string id, string name , string gender, string age)
+    {
+        _realm.Write(() =>
+        {
+            _patient = _realm.Add(new Patient(id, name, gender, age));
+        });
+        print("Patient Write Succeed!");
+    }
     
     
     //WINDOWS-----------------------------------------------------------------------------

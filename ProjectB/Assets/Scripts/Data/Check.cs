@@ -20,6 +20,7 @@ namespace Data
         public string iron { get; set; }
         public string hdl { get; set; }
         public string alkalinePhosphatase { get; set; }
+        
         public IList<string> possibleDiagnosise { get;}
 
         public Check()
@@ -50,6 +51,7 @@ namespace Data
         private void AnalyzeD()
         {
             //ANALYZE AND ADD TO LIST
+            
         }
 
     }

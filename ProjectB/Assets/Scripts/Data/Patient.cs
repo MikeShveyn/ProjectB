@@ -25,5 +25,11 @@ namespace Data
             this.gender = gender;
             this.age = age;
         }
+
+        public override string ToString()
+        {
+            return " Name: " + this.name + "\r\n Id: " + this.id + "\r\n Gender: " + this.gender + "\r\n Age: " + this.age;
+
+        }
     }
 }
