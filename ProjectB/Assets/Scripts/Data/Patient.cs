@@ -28,7 +28,13 @@ namespace Data
 
         public override string ToString()
         {
-            return " Name: " + this.name + "\r\n Id: " + this.id + "\r\n Gender: " + this.gender + "\r\n Age: " + this.age;
+            string temp =  " Name: " + this.name + "\r\n Id: " + this.id + "\r\n Gender: " + this.gender + "\r\n Age: " + this.age;
+            if (checks.Count > 0)
+            {
+                temp += "\r\n LastCheck: " + this.checks[checks.Count - 1].date;
+            }
+
+            return temp;
 
         }
     }

@@ -12,7 +12,16 @@ public class GameManager : Singleton<GameManager>
     private Realm _realm;
     private Doc _doc;
     private Patient _patient;
+    private Check _check;
+    private Dictionary<string, int> dAnalzye;
+    private int dSize;
     private const string pathToDb = "C:/Users/97253/Desktop/ProjectB/Data";
+
+    public int DSize
+    {
+        get => dSize;
+        set => dSize = value;
+    }
 
     public Doc GetDoc()
     {
@@ -23,7 +32,19 @@ public class GameManager : Singleton<GameManager>
     {
         return _patient;
     }
+
+    public Dictionary<string, int> DAnalzye
+    {
+        get => dAnalzye;
+        set => dAnalzye = value;
+    }
+
+    public Check GetCheck()
+    {
+        return _check;
+    }
     
+    //-----------------------------------------------------------------------------------
     private void OnEnable()
     {
         var config = new RealmConfiguration(pathToDb + "/default.realm");
@@ -34,6 +55,7 @@ public class GameManager : Singleton<GameManager>
     
     private void Start()
     {
+        DAnalzye = new Dictionary<string, int>();
         DontDestroyOnLoad(this.gameObject);
         //WINDOWS
         SignUp.SetActive(false);
@@ -90,11 +112,45 @@ public class GameManager : Singleton<GameManager>
     }
     
     
+    //check-----------------------------------------------------------------------------
+    public void CheckWriteToData(string wbc,string neut, string lymph, string rbc, string htc, string hb, 
+        string criatine, string iron, string hdl, string alkalinePhosphatase)
+    {
+        _realm.Write(() =>
+        {
+            _check = _realm.Add(new Check(wbc,neut,lymph,rbc,htc,hb, criatine,iron,hdl,alkalinePhosphatase));
+            _patient.checks.Add(_check);
+        });
+        print("Check Write Succeed and added to patient!");
+    }
+    
+    
     //WINDOWS-----------------------------------------------------------------------------
     public void SignUpPage()
     {
         UIManager.Instance.LoadLevel("SignUp");
     }
+
+
+    public void PrintPatient()
+    {
+        //Print to file
+    }
+    
+    public void ResetPatient()
+    {
+        _patient = null;
+        _check = null;
+    }
+
+    public void ResetAll()
+    {
+        _patient = null;
+        _check = null;
+        _doc = null;
+    }
+    
+    //-----------------------------------------------------------------------------------------
     
     private void OnDisable()
     {

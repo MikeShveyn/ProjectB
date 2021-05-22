@@ -19,6 +19,7 @@
             <e p="End.cs" t="Include" />
             <e p="Login.cs" t="Include" />
             <e p="MenuCheckP.cs" t="Include" />
+            <e p="MenuConcl.cs" t="Include" />
             <e p="MenuSignUp.cs" t="Include" />
             <e p="QuestionsMenu.cs" t="Include" />
             <e p="SignUp.cs" t="Include" />

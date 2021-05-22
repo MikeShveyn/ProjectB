@@ -27,11 +27,13 @@ namespace UI
         public void PrintError(string er)
         {
             error.text += er;
+            
         }
 
         public void ClearError()
         {
             error.text = "";
+            patientData.text = "";
         }
         
     }

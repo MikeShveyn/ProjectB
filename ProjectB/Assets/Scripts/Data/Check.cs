@@ -1,7 +1,11 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Data.Common;
+using System.Linq;
 using Realms;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Data
 {
@@ -22,7 +26,7 @@ namespace Data
         public string alkalinePhosphatase { get; set; }
         
         public IList<string> possibleDiagnosise { get;}
-
+        
         public Check()
         {
             
@@ -31,7 +35,7 @@ namespace Data
         public Check(string wbc,string neut, string lymph, string rbc, string htc, string hb, 
             string criatine, string iron, string hdl, string alkalinePhosphatase)
         {
-            this.date = DateTime.Now.ToString("yyyy/$$anonymous$$$$anonymous$$/dd HH:mm:ss");
+            this.date = DateTime.Now.ToString("g");
             this.wbc = wbc;
             this.neut = neut;
             this.lymph = lymph;
@@ -50,8 +54,40 @@ namespace Data
         
         private void AnalyzeD()
         {
-            //ANALYZE AND ADD TO LIST
             
+            //ANALYZE AND ADD TO LIST
+           List<string> temp = new List<string>();
+           
+           temp.AddRange(DBank.wbc[wbc]);
+           temp.AddRange(DBank.neut[neut]);
+           temp.AddRange(DBank.lymph[lymph]);
+           temp.AddRange(DBank.rbc[rbc]);
+           temp.AddRange(DBank.htc[htc]);
+           temp.AddRange(DBank.creatin[criatine]);
+           temp.AddRange(DBank.iron[iron]);
+           temp.AddRange(DBank.hdl[hdl]);
+           temp.AddRange(DBank.alcP[alkalinePhosphatase]);
+
+           GameManager.Instance.DSize = temp.Count;
+           foreach (var t in temp)
+           {
+               if (t == String.Empty)
+               {
+                   continue;
+               }
+               else if (!GameManager.Instance.DAnalzye.ContainsKey(t))
+               {
+                   GameManager.Instance.DAnalzye[t] = 1;
+                   possibleDiagnosise.Add(t);
+               }
+               else
+               {
+                   GameManager.Instance.DAnalzye[t] += 1;
+               }
+               
+           }
+            
+           
         }
 
     }

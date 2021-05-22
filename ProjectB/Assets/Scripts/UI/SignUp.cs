@@ -23,7 +23,7 @@ namespace UI
             String pass = password.text.ToString();
             String namePass = name.text.ToString();
             //check data base
-            if (ValidUserName(userN) && ValidPassword(pass))
+            if (ValidUserName(userN) && ValidPassword(pass) && namePass!=string.Empty)
             {
                 GameManager.Instance.WriteToData(userN,pass,namePass);
             }

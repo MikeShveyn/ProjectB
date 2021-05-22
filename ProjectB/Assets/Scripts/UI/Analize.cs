@@ -1,4 +1,7 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using Data;
 using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,22 +17,29 @@ namespace UI
         [SerializeField] private GameObject menuCheck;
         [SerializeField] private GameObject menuSignUp;
         [SerializeField] private GameObject menuQuestions;
+        [SerializeField] private GameObject menuConclusion;
         //Buttons
         [SerializeField] private Button startCheckButton;
         //Code r
         private MenuCheckP _menuCheckP;
         private MenuSignUp _menuSignUp;
-        
+        private QuestionsMenu _questionsMenu;
+        private MenuConcl _menuConcl;
+        private 
         // Start is called before the first frame update
         void Start()
         {
             titleName.text += GameManager.Instance.GetDoc().name;
             _menuCheckP = menuCheck.GetComponent<MenuCheckP>();
             _menuSignUp = menuSignUp.GetComponent<MenuSignUp>();
+            _questionsMenu = menuQuestions.GetComponent<QuestionsMenu>();
+            _menuConcl = menuConclusion.GetComponent<MenuConcl>();
             //Windows
             menuSignUp.SetActive(false);
             startCheckButton.gameObject.SetActive(false);
             menuQuestions.gameObject.SetActive(false);
+            menuConclusion.gameObject.SetActive(false);
+            menuCheck.gameObject.SetActive(true);
         }
         
         //MeuCheckP button---------------------------------------------------------------
@@ -56,8 +66,6 @@ namespace UI
 
         }
         
-    
-        
         
         //SignUpMenu----------------------------------------------------------
         public void SignUpPatient()
@@ -76,11 +84,68 @@ namespace UI
         }
         
         
-        //Windows Management
+        //MenuQuestions--------------------------------------------------------
+        public void CreateCheck()
+        {    
+       
+            GameManager.Instance.CheckWriteToData(_questionsMenu.Wbc, _questionsMenu.Neutrophil,
+                _questionsMenu.Lymphocytes,
+                _questionsMenu.RedBloodCells, _questionsMenu.Htc, _questionsMenu.Hemoblogin, _questionsMenu.Creatinine,
+                _questionsMenu.Iron, _questionsMenu.HdLipoprotein, _questionsMenu.AlkalinePhospatase);
+            
+            OpenMenuConcl();
+        }
+        
+        //Menu Conclusion-----------------------------------------------------------
+        private void FillData()
+        {
+            Dictionary<string, int> temp = new Dictionary<string, int>(GameManager.Instance.DAnalzye);
+            int tempSize = GameManager.Instance.DSize;
+            string pData = "";
+            //Calc
+            foreach (var t in temp.Keys.ToList())
+            {
+             
+                temp[t] = (int)((temp[t] / (float)tempSize) * 100);
+                pData += t + " with " + temp[t] + "% probability, recommended treatment: " +
+                         DBank.DiseasesDict[t] + "\r\n";
+            }
+
+            //Get concl menu field and edit
+            
+            _menuConcl.ConclText += pData;
+        }
+
+        public void PrintPatient()
+        {
+            GameManager.Instance.PrintPatient();
+        }
+
+        //Windows Management-----------------------------------------------------------
         public void OpenMenuQuestions()
         {
             _menuCheckP.gameObject.SetActive(false);
             menuQuestions.gameObject.SetActive(true);
+        }
+
+        private void OpenMenuConcl()
+        {
+            menuQuestions.gameObject.SetActive(false);
+            menuConclusion.gameObject.SetActive(true);
+            FillData();
+        }
+
+        public void OpenMenuPatientLog()
+        {
+            _menuCheckP.gameObject.SetActive(true);
+            _menuConcl.gameObject.SetActive(false);
+            GameManager.Instance.ResetPatient();
+        }
+
+        public void EndSession()
+        {
+            GameManager.Instance.ResetAll();
+            UIManager.Instance.LoadLevel("Login");
         }
         
         //Patient valid data check--------------------------------------------------
@@ -127,9 +192,14 @@ namespace UI
         //valid age
         private bool ValidAge(string age)
         {
-            for (int i = 0; i < name.Length; i++)
+            if (age == String.Empty)
             {
-                if(Char.IsLetterOrDigit(name[i])==false)
+                return false;
+            }
+            
+            for (int i = 0; i < age.Length; i++)
+            {
+                if(Char.IsDigit(age[i]) == false)
                 {
                     _menuSignUp.PrintError("", "", "", "Age includes only digits");
                     return false;
