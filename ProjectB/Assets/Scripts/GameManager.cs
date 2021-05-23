@@ -40,9 +40,10 @@ public class GameManager : Singleton<GameManager>
         set => dAnalzye = value;
     }
 
-    public Check GetCheck()
+    public Check GetCheck
     {
-        return _check;
+        get => _check;
+        set => _check = value;
     }
     
     //-----------------------------------------------------------------------------------
@@ -107,23 +108,32 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    public void PatientWriteToData(string id, string name , string gender, string age, string smoke)
+    public void PatientWriteToData(string id, string name , string gender, string age, string smoke, string ethnicity)
     {
         _realm.Write(() =>
         {
-            _patient = _realm.Add(new Patient(id, name, gender, age, smoke));
+            _patient = _realm.Add(new Patient(id, name, gender, age, smoke, ethnicity));
         });
         print("Patient Write Succeed!");
+    }
+
+    public void AddPatientConclusion(string pData)
+    {
+        _realm.Write(() =>
+        {
+            _check.possibleDiagnosise.Add(pData);
+        });
+        print("Patient Conclusion Write Succeed!");
     }
     
     
     //check-----------------------------------------------------------------------------
-    public void CheckWriteToData(string wbc,string neut, string lymph, string rbc, string htc, string hb, 
+    public void CheckWriteToData(string wbc,string neut, string lymph, string rbc, string htc, string urea, string hb, 
         string criatine, string iron, string hdl, string alkalinePhosphatase)
     {
         _realm.Write(() =>
         {
-            _check = _realm.Add(new Check(wbc,neut,lymph,rbc,htc,hb, criatine,iron,hdl,alkalinePhosphatase));
+            _check = _realm.Add(new Check(wbc,neut,lymph,rbc,htc,urea,hb, criatine,iron,hdl,alkalinePhosphatase));
             _patient.checks.Add(_check);
         });
         print("Check Write Succeed and added to patient!");

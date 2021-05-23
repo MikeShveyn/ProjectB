@@ -15,7 +15,7 @@ namespace UI
         [SerializeField] private InputField age;
         [SerializeField] private Text ageError;
         [SerializeField] private Toggle smoke;
-      
+        [SerializeField] private Dropdown ethnicity;
 
 
         public string Id()
@@ -47,6 +47,8 @@ namespace UI
             else
                 return "No";
         }
+
+        public string Ethnicity => ethnicity.options[ethnicity.value].text;
 
 
         private void Start()

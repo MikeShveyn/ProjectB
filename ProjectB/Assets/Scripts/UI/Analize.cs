@@ -78,10 +78,11 @@ namespace UI
             string age = _menuSignUp.Age();
             string gender= _menuSignUp.Gender();
             string smoke = _menuSignUp.Smoke();
+            string ethnicity = _menuSignUp.Ethnicity;
             
             if (ValidId(id, true) && ValidAge(age) && ValidGender(gender) && ValidName(name))
             {
-                GameManager.Instance.PatientWriteToData(id, name, gender, age, smoke);
+                GameManager.Instance.PatientWriteToData(id, name, gender, age, smoke, ethnicity);
                 _menuSignUp.gameObject.SetActive(false);
             }
         }
@@ -93,7 +94,7 @@ namespace UI
        
             GameManager.Instance.CheckWriteToData(_questionsMenu.Wbc, _questionsMenu.Neutrophil,
                 _questionsMenu.Lymphocytes,
-                _questionsMenu.RedBloodCells, _questionsMenu.Htc, _questionsMenu.Hemoblogin, _questionsMenu.Creatinine,
+                _questionsMenu.RedBloodCells, _questionsMenu.Htc, _questionsMenu.Urea, _questionsMenu.Hemoblogin, _questionsMenu.Creatinine,
                 _questionsMenu.Iron, _questionsMenu.HdLipoprotein, _questionsMenu.AlkalinePhospatase);
             
             OpenMenuConcl();
@@ -105,24 +106,28 @@ namespace UI
             Dictionary<string, int> temp = new Dictionary<string, int>(GameManager.Instance.DAnalzye);
             int tempSize = GameManager.Instance.DSize;
             string pData = "";
+            string cData = "";
+            Patient localP = GameManager.Instance.GetPatient();
             //Calc
             foreach (var t in temp.Keys.ToList())
             {
-                if(t == "Smokers" && GameManager.Instance.GetPatient().smoke == "No")
+                if(t == "Smokers" && localP.smoke == "No")
                     continue;
-                if(t == "Pregnancy" && (GameManager.Instance.GetPatient().gender == "M" || GameManager.Instance.GetPatient().gender == "m"))
+                if(t == "Pregnancy" && (localP.gender == "M" || localP.gender == "m"))
                     continue;
-                if(t == "Adult diabetes" && int.Parse(GameManager.Instance.GetPatient().age) < 18)
+                if(t == "Adult diabetes" && int.Parse(localP.age) < 18)
                     continue;
                 
                 temp[t] = (int)((temp[t] / (float)tempSize) * 100);
-                pData += "<b>" + t + " with " + temp[t] + "% probability, recommended treatment: " + "</b>" +
+                pData += "<b>" + t + " with " + temp[t] + "% probability" + "\r\n";
+                cData += "<b>" + t + " with " + temp[t] + "% probability, recommended treatment: " + "</b>" +
                          DBank.DiseasesDict[t] + "\r\n";
             }
 
             //Get concl menu field and edit
-            
-            _menuConcl.ConclText += pData;
+            _menuConcl.ConclText += cData;
+            //Patient Check DATA EDIT
+            GameManager.Instance.AddPatientConclusion(pData);
         }
 
         public void PrintPatient()
@@ -133,6 +138,7 @@ namespace UI
         //Windows Management-----------------------------------------------------------
         public void OpenMenuQuestions()
         {
+            
             _menuCheckP.gameObject.SetActive(false);
             menuQuestions.gameObject.SetActive(true);
         }

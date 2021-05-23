@@ -12,19 +12,14 @@
   <component name="ChangeListManager">
     <list default="true" id="b612c122-a626-4e68-968a-c636802b3e98" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectB/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectB/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Analize.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Analize.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MenuAnalize.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MenuAnalize.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Check.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Check.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Patient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Patient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Analize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Analize.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe3.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe4.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe5.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe6.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe7.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MenuSignUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MenuSignUp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/QuestionsMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/QuestionsMenu.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,16 +40,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/Doc.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Login.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/SignUp.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/QuestionsMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuConcl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/DBank.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuCheckP.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Login.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Data/Check.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuSignUp.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/Patient.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/QuestionsMenu.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/Check.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Analize.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Data/Patient.cs" />
       </list>
     </option>
   </component>
@@ -119,7 +114,7 @@
       <workItem from="1621683657425" duration="17952000" />
       <workItem from="1621763282492" duration="17305000" />
       <workItem from="1621789878457" duration="561000" />
-      <workItem from="1621791258763" duration="959000" />
+      <workItem from="1621791258763" duration="10922000" />
     </task>
     <servers />
   </component>
@@ -153,15 +148,15 @@
       <screen x="-1920" y="0" width="1280" height="693" />
     </state>
     <state x="-1827" y="93" width="1095" height="495" key="VCS.FileHistoryDialog/-1920.0.1280.693/0.0.1920.1040@-1920.0.1280.693" timestamp="1621699532114" />
-    <state x="321" y="100" width="1615" height="1027" key="dock-window-1" timestamp="1621790315790">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="0" y="0" width="932" height="668" maximized="true" key="dock-window-1/-1920.0.1280.693/0.0.1920.1040@-1920.0.1280.693" timestamp="1621688185657" />
-    <state x="321" y="100" width="1615" height="1027" key="dock-window-1/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1621790315790" />
-    <state x="-1920" y="0" width="1294" height="733" key="dock-window-2" timestamp="1621688185657">
+    <state x="-1902" y="0" width="967" height="667" key="dock-window-1" timestamp="1621809020036">
       <screen x="-1920" y="0" width="1280" height="693" />
     </state>
-    <state x="-1920" y="0" width="1294" height="733" key="dock-window-2/-1920.0.1280.693/0.0.1920.1040@-1920.0.1280.693" timestamp="1621688185657" />
+    <state x="-1902" y="0" width="967" height="667" key="dock-window-1/-1920.0.1280.693/0.0.1920.1040@-1920.0.1280.693" timestamp="1621809020036" />
+    <state x="321" y="100" width="1615" height="1027" key="dock-window-1/-1920.0.1280.693/0.0.1920.1040@0.0.1920.1040" timestamp="1621790315790" />
+    <state x="-1920" y="0" width="967" height="667" key="dock-window-2" timestamp="1621809020037">
+      <screen x="-1920" y="0" width="1280" height="693" />
+    </state>
+    <state x="-1920" y="0" width="967" height="667" key="dock-window-2/-1920.0.1280.693/0.0.1920.1040@-1920.0.1280.693" timestamp="1621809020037" />
     <state x="0" y="0" width="932" height="668" maximized="true" key="dock-window-3" timestamp="1621690108484">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
