@@ -31,12 +31,12 @@ namespace Data
 
         public override string ToString()
         {
-            string temp =  " Name: " + this.name + "\r\n Id: " + this.id + "\r\n Gender: " + this.gender + "\r\n Age: " + this.age + "\r\n Smoke: " + this.smoke;
+            string temp =  "<b> Name: </b>" + this.name + "\r\n<b> Id: </b>" + this.id + "\r\n<b> Gender: </b>" + this.gender + "\r\n<b> Age: </b>" + this.age + "\r\n<b> Smoke: </b>" + this.smoke;
             if (checks.Count > 0)
             {
-                temp += "\r\n LastCheck: " + this.checks[checks.Count - 1].date;
+                temp += "\r\n<b> LastCheck: </b>" + this.checks[checks.Count - 1].date;
             }
-
+            
             return temp;
 
         }

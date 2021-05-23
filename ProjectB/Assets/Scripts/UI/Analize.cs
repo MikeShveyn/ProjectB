@@ -110,9 +110,13 @@ namespace UI
             {
                 if(t == "Smokers" && GameManager.Instance.GetPatient().smoke == "No")
                     continue;
+                if(t == "Pregnancy" && (GameManager.Instance.GetPatient().gender == "M" || GameManager.Instance.GetPatient().gender == "m"))
+                    continue;
+                if(t == "Adult diabetes" && int.Parse(GameManager.Instance.GetPatient().age) < 18)
+                    continue;
                 
                 temp[t] = (int)((temp[t] / (float)tempSize) * 100);
-                pData += t + " with " + temp[t] + "% probability, recommended treatment: " +
+                pData += "<b>" + t + " with " + temp[t] + "% probability, recommended treatment: " + "</b>" +
                          DBank.DiseasesDict[t] + "\r\n";
             }
 
