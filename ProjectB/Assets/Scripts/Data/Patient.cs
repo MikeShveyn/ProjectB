@@ -10,28 +10,31 @@ namespace Data
         public string name { get; set; }
         public string gender { get; set; }
         public string age{ get; set; }
+        
+        public string smoke { get; set;}
         public IList<Check> checks {get;}
         
-
+    
         public Patient()
         {
             
         }
 
-        public Patient(string id, string name, string gender, string age)
+        public Patient(string id, string name, string gender, string age, string smoke)
         {
             this.id = id;
             this.name = name;
             this.gender = gender;
             this.age = age;
+            this.smoke = smoke;
         }
 
         public override string ToString()
         {
-            string temp =  " Name: " + this.name + "\r\n Id: " + this.id + "\r\n Gender: " + this.gender + "\r\n Age: " + this.age;
+            string temp =  " Name: " + this.name + "\r\n Id: " + this.id + "\r\n Gender: " + this.gender + "\r\n Age: " + this.age + "\r\n Smoke: " + this.smoke;
             if (checks.Count > 0)
             {
-                temp += "\r\n LastCheck: " + this.checks[checks.Count - 1];
+                temp += "\r\n LastCheck: " + this.checks[checks.Count - 1].date;
             }
 
             return temp;

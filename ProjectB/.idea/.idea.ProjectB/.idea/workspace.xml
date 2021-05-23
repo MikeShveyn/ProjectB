@@ -12,21 +12,13 @@
   <component name="ChangeListManager">
     <list default="true" id="b612c122-a626-4e68-968a-c636802b3e98" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectB/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectB/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GameManager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MenuAnalize.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MenuAnalize.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MenuLogin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MenuLogin.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Analize.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Analize.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Check.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Check.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Patient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Patient.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Login.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Analize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Analize.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MenuSignUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MenuSignUp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,15 +38,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/Doc.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Login.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuSignUp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/SignUp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/QuestionsMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuConcl.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/DBank.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuCheckP.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Analize.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Login.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/Check.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuSignUp.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Analize.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/Patient.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       </list>
@@ -119,7 +111,7 @@
       <workItem from="1621418512149" duration="14178000" />
       <workItem from="1621518340528" duration="8166000" />
       <workItem from="1621683657425" duration="17952000" />
-      <workItem from="1621763282492" duration="13253000" />
+      <workItem from="1621763282492" duration="17305000" />
     </task>
     <servers />
   </component>

@@ -53,6 +53,7 @@ public class GameManager : Singleton<GameManager>
         //Editor
         var config = new RealmConfiguration(pathToDb + "/default.realm");
         _realm  = Realm.GetInstance(config);
+       // _realm  = Realm.GetInstance();
         
     }
     
@@ -106,11 +107,11 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
-    public void PatientWriteToData(string id, string name , string gender, string age)
+    public void PatientWriteToData(string id, string name , string gender, string age, string smoke)
     {
         _realm.Write(() =>
         {
-            _patient = _realm.Add(new Patient(id, name, gender, age));
+            _patient = _realm.Add(new Patient(id, name, gender, age, smoke));
         });
         print("Patient Write Succeed!");
     }

@@ -45,6 +45,7 @@ namespace UI
         //MeuCheckP button---------------------------------------------------------------
         public void LogInPatient()
         {
+            
             _menuCheckP.ClearError();
             string id = _menuCheckP.PatientId();
             if (ValidId(id, false))
@@ -59,6 +60,7 @@ namespace UI
                 {
                     _menuCheckP.PrintError("There is no such patient!!!");
                     menuSignUp.gameObject.SetActive(true);
+                    startCheckButton.gameObject.SetActive(false);
                 }
                 
             }
@@ -75,10 +77,11 @@ namespace UI
             string name = _menuSignUp.Name();
             string age = _menuSignUp.Age();
             string gender= _menuSignUp.Gender();
+            string smoke = _menuSignUp.Smoke();
             
             if (ValidId(id, true) && ValidAge(age) && ValidGender(gender) && ValidName(name))
             {
-                GameManager.Instance.PatientWriteToData(id, name, gender, age);
+                GameManager.Instance.PatientWriteToData(id, name, gender, age, smoke);
                 _menuSignUp.gameObject.SetActive(false);
             }
         }
@@ -105,7 +108,9 @@ namespace UI
             //Calc
             foreach (var t in temp.Keys.ToList())
             {
-             
+                if(t == "Smokers" && GameManager.Instance.GetPatient().smoke == "No")
+                    continue;
+                
                 temp[t] = (int)((temp[t] / (float)tempSize) * 100);
                 pData += t + " with " + temp[t] + "% probability, recommended treatment: " +
                          DBank.DiseasesDict[t] + "\r\n";

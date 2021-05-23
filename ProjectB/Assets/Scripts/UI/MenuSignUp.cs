@@ -14,6 +14,8 @@ namespace UI
         [SerializeField] private Text genderError;
         [SerializeField] private InputField age;
         [SerializeField] private Text ageError;
+        [SerializeField] private Toggle smoke;
+      
 
 
         public string Id()
@@ -35,12 +37,25 @@ namespace UI
         {
             return age.text;
         }
-        
+
+
+        public string Smoke()
+        {
+            bool temp = smoke.GetComponent<Toggle>().isOn;
+            if (temp)
+                return "Yes";
+            else
+                return "No";
+        }
+
+
         private void Start()
         {
             ClearError();
             
         }
+        
+        
         
         public void PrintError(string idEr, string nameEr, string genEr, string ageEr)
         {
