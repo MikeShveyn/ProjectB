@@ -31,7 +31,7 @@ namespace Data
             string temp =  " Name: " + this.name + "\r\n Id: " + this.id + "\r\n Gender: " + this.gender + "\r\n Age: " + this.age;
             if (checks.Count > 0)
             {
-                temp += "\r\n LastCheck: " + this.checks[checks.Count - 1].date;
+                temp += "\r\n LastCheck: " + this.checks[checks.Count - 1];
             }
 
             return temp;

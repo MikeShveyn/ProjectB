@@ -11,25 +11,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b612c122-a626-4e68-968a-c636802b3e98" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MenuConcl.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MenuConcl.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectB/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectB/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectB/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectB/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/GameManager.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/GameManager.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MenuAnalize.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MenuAnalize.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MenuLogin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MenuLogin.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Analize.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Analize.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Check.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Check.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/DBank.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/DBank.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Patient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Patient.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Analize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Analize.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MenuCheckP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MenuCheckP.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/QuestionsMenu.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/QuestionsMenu.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/SignUp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/SignUp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Login.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Login.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker1.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-AssetImportWorker0.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe1.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/shadercompiler-UnityShaderCompiler.exe2.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,17 +46,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/Doc.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Login.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Login.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuSignUp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/SignUp.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/QuestionsMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuConcl.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/DBank.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Data/Patient.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuCheckP.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Data/Check.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Analize.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/UI/Login.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/Check.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Data/Patient.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -82,6 +79,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/ProjectB/Builds\ProjectB.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\97253\Desktop\ProjectB\Builds" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -114,6 +119,7 @@
       <workItem from="1621418512149" duration="14178000" />
       <workItem from="1621518340528" duration="8166000" />
       <workItem from="1621683657425" duration="17952000" />
+      <workItem from="1621763282492" duration="13253000" />
     </task>
     <servers />
   </component>

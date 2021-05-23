@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using Data;
 using Realms;
 using UnityEngine;
@@ -47,8 +48,10 @@ public class GameManager : Singleton<GameManager>
     //-----------------------------------------------------------------------------------
     private void OnEnable()
     {
+        //Build
+        //var config = new RealmConfiguration(Application.dataPath + "/DataBase/default.realm");
+        //Editor
         var config = new RealmConfiguration(pathToDb + "/default.realm");
-        
         _realm  = Realm.GetInstance(config);
         
     }
@@ -62,6 +65,7 @@ public class GameManager : Singleton<GameManager>
 
         //start Level load
         UIManager.Instance.LoadLevel("Login");
+        
     }
 
     //Doc_____________________________________________________________________________
@@ -135,6 +139,23 @@ public class GameManager : Singleton<GameManager>
     public void PrintPatient()
     {
         //Print to file
+        string path = Application.dataPath +  "/PatientLogs/" + _patient.id + ".txt";
+        
+        if (!File.Exists(path))
+        {
+            File.WriteAllText(path, "Patients lOGS\n\n");
+        }
+
+        string content = _patient.ToString();
+
+        try
+        {
+            File.AppendAllText(path, content);
+        }
+        catch
+        {
+            // ignored
+        }
     }
     
     public void ResetPatient()
@@ -155,5 +176,10 @@ public class GameManager : Singleton<GameManager>
     private void OnDisable()
     {
         _realm.Dispose();
+    }
+
+    public void Quite()
+    {
+        Application.Quit();
     }
 }

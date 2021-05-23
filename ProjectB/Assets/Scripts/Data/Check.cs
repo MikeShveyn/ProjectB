@@ -35,7 +35,7 @@ namespace Data
         public Check(string wbc,string neut, string lymph, string rbc, string htc, string hb, 
             string criatine, string iron, string hdl, string alkalinePhosphatase)
         {
-            this.date = DateTime.Now.ToString("g");
+            this.date = DateTime.Now.ToString("G");
             this.wbc = wbc;
             this.neut = neut;
             this.lymph = lymph;
@@ -88,6 +88,19 @@ namespace Data
            }
             
            
+        }
+        
+        public override string ToString()
+        {
+            string temp =  " Date: " + this.date + "\r\n Conclusion: ";
+            foreach (var checks in possibleDiagnosise)
+            {
+             
+                temp += "\r\n" + checks;
+            }
+
+            return temp;
+
         }
 
     }

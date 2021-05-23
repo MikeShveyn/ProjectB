@@ -29,6 +29,12 @@ namespace UI
         
         
         }
+        
+        //Windows
+        public void Quite()
+        {
+            GameManager.Instance.Quite();
+        }
     
         //User Name check---------------------------------------------------------------------------------------------------
         private bool ValidUserName(String name)
