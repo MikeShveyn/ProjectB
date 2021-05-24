@@ -15,14 +15,8 @@ public class GameManager : Singleton<GameManager>
     private Patient _patient;
     private Check _check;
     private Dictionary<string, int> dAnalzye;
-    private int dSize;
     private const string pathToDb = "C:/Users/97253/Desktop/ProjectB/Data";
-
-    public int DSize
-    {
-        get => dSize;
-        set => dSize = value;
-    }
+    
 
     public Doc GetDoc()
     {
@@ -50,9 +44,9 @@ public class GameManager : Singleton<GameManager>
     private void OnEnable()
     {
         //Build
-        var config = new RealmConfiguration(Application.dataPath + "/DataBase/default.realm");
+        //var config = new RealmConfiguration(Application.dataPath + "/DataBase/default.realm");
         //Editor
-        //var config = new RealmConfiguration(pathToDb + "/default.realm");
+        var config = new RealmConfiguration(pathToDb + "/default.realm");
         _realm  = Realm.GetInstance(config);
        // _realm  = Realm.GetInstance();
         
@@ -67,6 +61,9 @@ public class GameManager : Singleton<GameManager>
 
         //start Level load
         UIManager.Instance.LoadLevel("Login");
+        
+        //DebugBuild
+        Debug.developerConsoleVisible = true;
         
     }
 

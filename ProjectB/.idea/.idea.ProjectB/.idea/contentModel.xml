@@ -16,7 +16,6 @@
           <e p="GameManager.cs" t="Include" />
           <e p="UI" t="Include">
             <e p="Analize.cs" t="Include" />
-            <e p="End.cs" t="Include" />
             <e p="Login.cs" t="Include" />
             <e p="MenuCheckP.cs" t="Include" />
             <e p="MenuConcl.cs" t="Include" />

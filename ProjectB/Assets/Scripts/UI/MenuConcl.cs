@@ -12,5 +12,11 @@ namespace UI
             get => conclText.text;
             set => conclText.text = value;
         }
+        
+        
+        private void OnDisable()
+        {
+            conclText.text = "";
+        }
     }
 }

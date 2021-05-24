@@ -107,21 +107,37 @@ namespace UI
         private void FillData()
         {
             Dictionary<string, int> temp = new Dictionary<string, int>(GameManager.Instance.DAnalzye);
-            int tempSize = GameManager.Instance.DSize;
+            int tempSize = 0;
+            List<string> rightKeys = new List<string>();
             string pData = "";
             string cData = "";
             Patient localP = GameManager.Instance.GetPatient();
             //Calc
             foreach (var t in temp.Keys.ToList())
             {
-                if(t == "Smokers" && localP.smoke == "No")
-                    continue;
-                if(t == "Pregnancy" && (localP.gender == "M" || localP.gender == "m"))
-                    continue;
-                if(t == "Adult diabetes" && int.Parse(localP.age) < 18)
-                    continue;
+                if (t == "Smokers" && localP.smoke == "No")
+                {
+                }
+                else if (t == "Pregnancy" && (localP.gender == "M" || localP.gender == "m"))
+                {
+                }
+                else if (t == "Adult diabetes" && int.Parse(localP.age) < 18)
+                {
+                }
+                else
+                {
+                    rightKeys.Add(t) ;
+                    tempSize += temp[t];
+                }
+            }
+
+            
+
+            foreach (var t in rightKeys)
+            {
+                Debug.Log("TempM " + temp[t] + "Temp float " + (float)temp[t] + "tempSize " + tempSize );
+                temp[t] = (int) (((float)temp[t] / tempSize) * 100);
                 
-                temp[t] = (int)((temp[t] / (float)tempSize) * 100);
                 pData = t + " with " + temp[t] + "% probability";
                 //Patient Check DATA EDIT
                 GameManager.Instance.AddPatientConclusion(pData);
@@ -132,8 +148,8 @@ namespace UI
 
             //Get concl menu field and edit
             _menuConcl.ConclText += cData;
-            
-        }
+            }
+        
 
         public void PrintPatient()
         {

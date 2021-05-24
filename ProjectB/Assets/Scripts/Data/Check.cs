@@ -323,7 +323,6 @@ namespace Data
            temp.AddRange(DBank.alcP[value]);
             
            //Setup and fill relevant data------------------------------------------------
-           GameManager.Instance.DSize = temp.Count;
            foreach (var t in temp)
            {
                if (t == String.Empty)
@@ -333,7 +332,6 @@ namespace Data
                else if (!GameManager.Instance.DAnalzye.ContainsKey(t))
                {
                    GameManager.Instance.DAnalzye[t] = 1;
-                   //possibleDiagnosise.Add(t);
                }
                else
                {
@@ -341,7 +339,6 @@ namespace Data
                }
                
            }
-            
            
         }
         
