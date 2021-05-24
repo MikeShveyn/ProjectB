@@ -50,9 +50,9 @@ public class GameManager : Singleton<GameManager>
     private void OnEnable()
     {
         //Build
-        //var config = new RealmConfiguration(Application.dataPath + "/DataBase/default.realm");
+        var config = new RealmConfiguration(Application.dataPath + "/DataBase/default.realm");
         //Editor
-        var config = new RealmConfiguration(pathToDb + "/default.realm");
+        //var config = new RealmConfiguration(pathToDb + "/default.realm");
         _realm  = Realm.GetInstance(config);
        // _realm  = Realm.GetInstance();
         

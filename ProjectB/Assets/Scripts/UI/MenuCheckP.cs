@@ -35,6 +35,17 @@ namespace UI
             error.text = "";
             patientData.text = "";
         }
-        
+
+        private void ClearPatientData()
+        {
+            this.id.text = "";
+            this.patientData.text = "";
+        }
+
+        private void OnDisable()
+        {
+            ClearError();
+            ClearPatientData();
+        }
     }
 }

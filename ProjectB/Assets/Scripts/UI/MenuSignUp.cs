@@ -74,5 +74,19 @@ namespace UI
             genderError.text = "";
             ageError.text = "";
         }
+
+        private void ClearFields()
+        {
+            this.age.text = "";
+            this.gender.text = "";
+            this.id.text = "";
+            this.name.text = "";
+        }
+
+        private void OnDisable()
+        {
+            ClearError();
+            ClearFields();
+        }
     }
 }

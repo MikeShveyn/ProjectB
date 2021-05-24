@@ -80,7 +80,7 @@ namespace UI
             string smoke = _menuSignUp.Smoke();
             string ethnicity = _menuSignUp.Ethnicity;
             
-            if (ValidId(id, true) && ValidAge(age) && ValidGender(gender) && ValidName(name))
+            if (ValidId(id, true) && ValidName(name) && ValidGender(gender) && ValidAge(age))
             {
                 GameManager.Instance.PatientWriteToData(id, name, gender, age, smoke, ethnicity);
                 _menuSignUp.gameObject.SetActive(false);
@@ -90,14 +90,17 @@ namespace UI
         
         //MenuQuestions--------------------------------------------------------
         public void CreateCheck()
-        {    
-       
-            GameManager.Instance.CheckWriteToData(_questionsMenu.Wbc, _questionsMenu.Neutrophil,
-                _questionsMenu.Lymphocytes,
-                _questionsMenu.RedBloodCells, _questionsMenu.Htc, _questionsMenu.Urea, _questionsMenu.Hemoblogin, _questionsMenu.Creatinine,
-                _questionsMenu.Iron, _questionsMenu.HdLipoprotein, _questionsMenu.AlkalinePhospatase);
+        {
+            if (_questionsMenu.CheckFieldsNotEmpty())
+            {
+                GameManager.Instance.CheckWriteToData(_questionsMenu.Wbc, _questionsMenu.Neutrophil,
+                    _questionsMenu.Lymphocytes,
+                    _questionsMenu.RedBloodCells, _questionsMenu.Htc, _questionsMenu.Urea, _questionsMenu.Hemoblogin, _questionsMenu.Creatinine,
+                    _questionsMenu.Iron, _questionsMenu.HdLipoprotein, _questionsMenu.AlkalinePhospatase);
             
-            OpenMenuConcl();
+                OpenMenuConcl();
+            }
+           
         }
         
         //Menu Conclusion-----------------------------------------------------------
@@ -119,15 +122,17 @@ namespace UI
                     continue;
                 
                 temp[t] = (int)((temp[t] / (float)tempSize) * 100);
-                pData += "<b>" + t + " with " + temp[t] + "% probability" + "\r\n";
+                pData = t + " with " + temp[t] + "% probability";
+                //Patient Check DATA EDIT
+                GameManager.Instance.AddPatientConclusion(pData);
+                
                 cData += "<b>" + t + " with " + temp[t] + "% probability, recommended treatment: " + "</b>" +
                          DBank.DiseasesDict[t] + "\r\n";
             }
 
             //Get concl menu field and edit
             _menuConcl.ConclText += cData;
-            //Patient Check DATA EDIT
-            GameManager.Instance.AddPatientConclusion(pData);
+            
         }
 
         public void PrintPatient()
