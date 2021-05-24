@@ -11,17 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b612c122-a626-4e68-968a-c636802b3e98" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectB/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectB/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.ProjectB/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.ProjectB/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Data/Check.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Data/Check.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/Analize.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/Analize.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/End.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/End.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/UI/MenuConcl.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/UI/MenuConcl.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/ApiUpdaterCheck.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0-prev.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/AssetImportWorker0.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,9 +39,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/QuestionsMenu.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuCheckP.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/MenuConcl.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Data/Check.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/UI/Analize.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -118,7 +108,7 @@
       <workItem from="1621789878457" duration="561000" />
       <workItem from="1621791258763" duration="10922000" />
       <workItem from="1621844738851" duration="4415000" />
-      <workItem from="1621850547088" duration="3378000" />
+      <workItem from="1621850547088" duration="3543000" />
     </task>
     <servers />
   </component>
